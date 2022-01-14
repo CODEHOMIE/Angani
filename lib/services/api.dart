@@ -9,7 +9,7 @@ class Api {
   Future<List<ForecastModel>> getForecast5(city) async {
     Response response = await get(
       Uri.parse(
-        "${Urls.FORECAST_URL}nairobi&${Urls.APP_ID}",
+        "${Urls.FORECAST_URL}$city&${Urls.APP_ID}",
       ),
     ).timeout(Duration(seconds: 20), onTimeout: () {
       return timeoutResponse;
@@ -27,7 +27,7 @@ class Api {
   ) async {
     final result = await http.Client().get(
       Uri.parse(
-        "${Urls.WEATHER_URL}nairobi&${Urls.APP_ID}",
+        "${Urls.WEATHER_URL}$city&${Urls.APP_ID}",
       ),
     );
     
