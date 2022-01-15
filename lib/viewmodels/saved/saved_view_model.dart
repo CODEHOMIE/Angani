@@ -5,7 +5,7 @@ class SavedViewModels extends ChangeNotifier {
   final _api = locator<Api>();
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
 
-  late List<SavedModel> _savedList;
+  List<SavedModel> _savedList = [];
   List<SavedModel> get saved => _savedList;
 
   Future getSavedList() async {

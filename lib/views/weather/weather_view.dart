@@ -26,7 +26,7 @@ class WeatherView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               WeatherItem(
-                weather: viewModel.weathers,
+                weather:  viewModel.weathers,
               ),
               WeatherMidItem(
                 weather: viewModel.weathers,

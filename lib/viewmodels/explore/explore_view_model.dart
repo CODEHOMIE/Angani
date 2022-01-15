@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ExploreViewModels extends ChangeNotifier {
   final _api = locator<Api>();
 
-  late List<PlaceModel> _places;
+  List<PlaceModel> _places = [];
   List<PlaceModel> get places => _places;
 
   String city = '';
